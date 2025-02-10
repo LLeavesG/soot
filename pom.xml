@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -51,6 +53,7 @@
         <developerConnection>scm:git:git@github.com:soot-oss/soot.git</developerConnection>
         <url>https://github.com/soot-oss/soot</url>
     </scm>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -64,7 +67,7 @@
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
         <maven-nexus-staging-plugin.version>1.7.0</maven-nexus-staging-plugin.version>
-        <maven-gpg-plugin.version>3.2.6</maven-gpg-plugin.version>
+        <maven-gpg-plugin.version>3.2.3</maven-gpg-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-checkstyle-plugin.version>3.5.0</maven-checkstyle-plugin.version>
         <checkstyle.version>8.18</checkstyle.version>
@@ -374,7 +377,6 @@
                 <configuration>
                     <propertyExpansion>config_loc=${checkstyle.dir.path}</propertyExpansion>
                     <configLocation>${checkstyle.file.path}</configLocation>
-                    <encoding>UTF-8</encoding>
                     <logViolationsToConsole>true</logViolationsToConsole>
                     <failOnViolation>${checkstyle.failOnViolation}</failOnViolation>
                     <violationSeverity>warning</violationSeverity>
@@ -605,6 +607,7 @@
             </snapshots>
         </repository>
     </repositories>
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
